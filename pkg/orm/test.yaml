@@ -1,0 +1,23 @@
+logger:
+  LEVEL_GORM_LOG: 1
+  dispatch_time:
+    - "08:00-11:01"
+    - "11:04-12:00"
+
+database:
+  logger:
+    LEVEL_GORM_LOG: 1
+    IGNORE_RECORD_NOT_FOUND:  true
+    SLOW_THRESHOLD: 200
+  sam:
+    DSN: "gorm:gorm@tcp(localhost:9910)/db?charset=utf8&parseTime=True&loc=Asia%2Shanghai"
+    TABLE_PREFIX: "T_"
+    SINGULAR_TABLE: true
+    MAX_IDLE: 50
+    MAX_OPEN: 0
+  sccm:
+    DSN: "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Asia%2Shanghai"
+    TABLE_PREFIX: "F_"
+    SINGULAR_TABLE: true
+    MAX_IDLE: 50
+    MAX_OPEN: 0
