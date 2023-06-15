@@ -18,7 +18,7 @@ type GCounter struct {
 // 增加allow计数，在limitTime时间内计数达到limitThreshold阈值则触发限流，limitTime时间后会重置
 func (c *GCounter) Limit(n int64) (allow bool, err error) {
 	key := c.key
-	var current int64 = 0
+	var current int64
 	current, err = c.glimiter.redisOper.IncrBy(key, n)
 	c.logger.Tracef("Incr %s %d current:%d, error:%v ", key, n, current, err)
 	if err != nil {

@@ -1,4 +1,6 @@
 # go-redisson
+[![Go Report Card](https://goreportcard.com/badge/github.com/paceew/go-redisson)](https://goreportcard.com/report/github.com/paceew/go-redisson)
+[![License：MIT](https://img.shields.io/github/license/paceew/go-redisson)](https://github.com/paceew/go-redisson/blob/main/LICENSE)
 
 借鉴redisson的思路，实现golang风格的go-redisson
 
